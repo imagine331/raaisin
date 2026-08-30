@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#060912">
+  <title>Изюмчик</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="preload" id="preload"><span></span><p>проявляем воспоминания</p></div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#start" aria-label="В начало">Изюмчик <i></i></a>
+    <div class="top-actions">
+      <button class="sound" id="sound" type="button" aria-label="Включить музыку"><span>♪</span><b>звук</b></button>
+      <button class="menu" id="menu" type="button" aria-label="Открыть навигацию"><i></i><i></i></button>
+    </div>
+  </header>
+  <nav class="nav" id="nav">
+    <a href="#beginnings">начало</a><a href="#school">годы</a><a href="#ours">наше</a><a href="#model">модель</a><a href="#fun">без фильтров</a><a href="#archive">ещё</a><a href="#videos">видосики</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="start">
+      <div class="hero-copy reveal">
+        <h1>Арина<span class="dot">.</span></h1>
+        <p class="lead">Просто немного расслабься.</p>
+        <a href="#beginnings" class="open">Открыть <span>↓</span></a>
+      </div>
+      <div class="hero-photo reveal" data-photo="Любимка/photo_2026-08-29 21.49.36.jpeg"><div class="photo-glow"></div></div>
+      <p class="scroll-hint">листай медленно <span></span></p>
+    </section>
+
+    <section class="chapter chapter--intro" id="beginnings">
+      <div class="chapter-title reveal"><p>01 / откуда всё начиналось</p><h2>Там, где<br><em>всё</em> впервые.</h2><span>Первые страницы всегда самые тёплые.</span></div>
+      <div class="film-grid reveal" data-album="Откуда всё начиналось"></div>
+    </section>
+
+    <section class="chapter chapter--dark" id="school">
+      <div class="quote reveal">«Те самые годы.<br>И те самые глаза.»</div>
+      <div class="wide-strip reveal" data-album="Те самые годы"></div>
+      <div class="chapter-end reveal"><p>02 / между звонками</p><h2>Время, когда<br>всё было <em>впереди.</em></h2></div>
+    </section>
+
+    <section class="chapter timeline-section" id="ours">
+      <div class="chapter-title reveal"><p>03 / немного нас</p><h2>Это —<br><em>наше.</em></h2><span>Не идеальное, но тёплое.</span></div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="chapter model-section" id="model">
+      <div class="model-head reveal"><p>04 / а я говорю</p><h2>модель.</h2></div>
+      <div class="model-grid" data-album="Модель"></div>
+      <p class="last-line reveal">Зря ты себя так гоняешь.</p>
+    </section>
+
+    <section class="chapter fun-section" id="fun">
+      <div class="chapter-title reveal"><p>05 / без фильтров</p><h2>Вот она,<br><em>реальность.</em></h2><span>И именно поэтому здесь так весело.</span></div>
+      <div class="fun-carousel reveal" id="funCarousel" data-album="Без фильтров"><button class="arrow prev" aria-label="Предыдущее фото">←</button><div class="slides"></div><button class="arrow next" aria-label="Следующее фото">→</button><div class="counter"></div></div>
+      <div class="mini-note reveal">* доказательства, что ты умеешь быть<br>невероятной в любом состоянии</div>
+    </section>
+
+    <section class="chapter archive-section" id="archive">
+      <div class="chapter-title reveal"><p>06 / всё, что ещё хочется оставить</p><h2>Ещё немного<br><em>важного.</em></h2><span>Каждая папка — отдельное настроение.</span></div>
+      <div class="folder-albums" id="folderAlbums"></div>
+    </section>
+
+    <section class="chapter videos-section" id="videos">
+      <div class="chapter-title reveal"><p>07 / чтобы не только в памяти</p><h2>Видосики<span class="dot">.</span></h2><span>Те же моменты — только немного живее.</span></div>
+      <div class="videos-grid" id="videosGrid"></div>
+    </section>
+
+    <section class="final" id="final">
+      <div class="final-content reveal"><p class="eyebrow">и напоследок</p><h2>Арина</h2><p>Хотел бы, чтобы ты видела себя<br>так, как вижу тебя я.</p><p class="final-note">Всё это — ты. Даже когда кажется, что нет. И та, которая смеётся, любит, держится и при этом остаётся собой.<br>Она никуда не делась.</p><p class="sign">Даня</p><a href="#start" class="open">Сначала <span>↑</span></a></div>
+    </section>
+  </main>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button aria-label="Закрыть">×</button><img alt=""><p></p></div>
+  <audio id="audio" loop preload="metadata"><source src="photo/music.mp3" type="audio/mpeg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
